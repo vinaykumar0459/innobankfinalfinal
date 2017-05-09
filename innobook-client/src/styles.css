@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+img{ width: 290px; padding: 5px 5px 10px 5px; }
+.top-nav li a { padding: 30px 15px 30px 15px !important;}
+.top-nav { float: right !important;}
+
+
+.sidebarmain { border: 5px solid #fcccbf;    padding: 5px 10px;margin-top: 25px; }
+[routerlinkactive] a { color: red;}
+.sidebarmain ul li { list-style-type: none;}
+.sidebarmain .welcome-head {     font-size: 18px;
+    text-align: center;
+    padding: 5px;}
+.account-name { font-size: 18px; padding: 0px; text-align: center; }
+.myprofile-main { padding-top: 15px;border-bottom: 1px solid #666;
+    padding-bottom: 5px;}
+.sidebarmain ul li a:hover { text-decoration: none; }
+.account-summary-main ul li { padding-top: 2px;}
+.account-summary-main ul li a { color: #333;}
+.account-holdername { padding-bottom: 10px;}
+.account-summary-main li a { padding: 5px 15px;}
+.account-summary-main li a.active { background: #eaeaea; font-weight: bold}
+.account-summary-main ul li {     border-bottom: 1px solid #999;
+    padding-bottom: 6px; padding-top: 6px;}
+.account-summary-main { margin-top: 15px;}
+input.ng-invalid {
+    border-left: 2px solid red !important;
+}
+
+input.ng-pristine {
+    border-left: 2px solid green !important;
+}
+
+.error {
+    color: red;
+    padding: 5px;
+}

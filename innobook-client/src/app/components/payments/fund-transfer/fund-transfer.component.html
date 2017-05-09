@@ -1,0 +1,88 @@
+<p>Fund Transfer</p>
+<div>Transfer Funds to an account in other bank through {{transferModes}} </div>
+<p>payment mode</p>
+
+     <form action="" #f="ngForm">
+       <label class="radio-inline">
+        <input type="radio" [(ngModel)]="transferModes"  name="transferModes" value="NEFT">NEFT
+        </label>
+        <label class="radio-inline">
+        <input type="radio" [(ngModel)]="transferModes"  name="transferModes" value="RTGS">RTGS
+        </label>
+         <label class="radio-inline">
+        <input type="radio" [(ngModel)]="transferModes"  name="transferModes" value="IMPS">Payment instantly IMPS
+          </label>
+    </form>
+
+<form id="form-validation" action="realtime_form.html" method="post" class="form-horizontal">
+  <h4><b>Information of the account you want to transfer fund</b></h4>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label" for="skill">
+                                                Select Account :
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <select id="skill" name="skill" class="form-control">
+                                                    <option value="" disabled="" selected="">
+                                                        Select account
+                                                    </option>
+                                                    <option value="234">0000432187653456</option>
+                                                    <option value="345">0000891236543567</option>
+                                                </select>
+                                            </div>
+                                        </div>
+  <div class="form-group">
+                                            <label class="col-sm-4 control-label" for="holder-name">
+                                                Account Holder name :
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="holder-name" name="holderName" [(ngModel)]="client.name" class="form-control" placeholder="Account holder name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label" for="bank-name">
+                                                 Name of the Bank :
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="bank-name" name="bankName" [(ngModel)]="client.bank" class="form-control" placeholder="Bank name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label" for="swift-code">
+                                                IFSC Code :
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="swift-code" name="bankName" [(ngModel)]="client.ifsccode" class="form-control" placeholder="SWIFT code">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label" for="acc-number">
+                                                Account Number/BAN :
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="acc-number" name="number" [(ngModel)]="client.accountnum" class="form-control" placeholder="Account Number" maxlength="12" minlength="12" >
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="col-sm-4 control-label" for="number">
+                                                Amount :
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="number" name="number" [(ngModel)]="client.amount"  class="form-control" placeholder="Enter amount" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label" for="purpose">
+                                                Purpose (optional) :
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="purpose" name="purpose" class="form-control" placeholder="optional">
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <div class="col-sm-8 col-sm-offset-4">
+                                                <button type="submit" class="btn btn-effect-ripple btn-primary" (click)='transfer(client)'>Transfer</button>
+                                                <button type="reset" class="btn btn-effect-ripple btn-default reset_btn">Reset
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>

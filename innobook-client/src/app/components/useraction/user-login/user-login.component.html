@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="login-main col-md-8">
+    <form action="/User/AccessSignin/Start" id="AccessForm" method="post" class="ng-pristine ng-valid"><input name="FormInstanceToken" type="hidden" value="7D150975E3AF4C219DC8E335B0A4AC77" autocomplete="off"><noscript>&lt;input name='NoJavascript' type='hidden' value='true' /&gt;</noscript>
+<a id="inline" href="#idash" tabindex="-1"></a>
+    
+    <div class="RoundBase RoundPad Corner RoundBaseDone"><div class="RoundWrap content RoundWrapDone login-left-main"><div class="t"></div><div class="Round RoundDone" style="background-color: transparent; padding: 0px; margin: 0px; border: 0px;">
+        <table class="Edit" cellspacing="2px">
+            <!-- ==================== Title -->
+            <tbody><tr class="Title">
+                <td colspan="2">
+                    Sign In – Welcome to
+                    Innobank Online Banking
+                </td>
+            </tr>
+            <!-- ==================== Field -->
+            <tr class="Field">
+                <td class="LabelForm">
+                    Username:
+                </td>
+                <td class="Value">
+                    <input autocomplete="off"  name="userID" type="text" value="" width="160px" tabindex="1" [(ngModel)]="data.userID" #userID="ngModel" required>
+                    &nbsp;&nbsp;
+                    <span  *ngIf="userID.errors && (userID.dirty || userID.touched)" class="alert alert-danger">
+                        <span [hidden]="!userID.errors.required">Please Enter UserId</span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="Field">
+                <td class="LabelForm">
+                    Password :
+                </td>
+                <td class="Value">
+                    <input autocomplete="off"  name="Password" type="password" value="" width="160px" tabindex="2" [(ngModel)]="data.password" #Password="ngModel" required>
+                    &nbsp;&nbsp;
+                    <span  *ngIf="Password.errors && (Password.dirty || Password.touched)" class="alert alert-danger">
+                        <span [hidden]="!Password.errors.required">Please Enter Password</span>
+                    </span>
+                </td>
+            </tr>
+            <!-- ==================== Action -->
+            <tr class="Action">
+                <td class="Label">
+                </td>
+                <td class="Value">
+                    <input id="SubmitNext" name="SubmitNext" type="submit" value="Sign In" tabindex="3" class="Boot" autocomplete="off" (click)="signIn($event)">
+                    <input id="SubmitCancel" name="SubmitCancel" type="submit" value="Cancel" tabindex="4" class="Boot" autocomplete="off">
+                    <span class="SubmitWorking" style="display: none">
+                        <img alt="" src="/User/Content/Images/Spinner.gif" style="vertical-align: middle">
+                        please wait ... </span>
+                </td>
+            </tr>
+          
+            <tr class="Field">
+                <td class="LabelForm">
+                </td>
+                <td class="Value">
+                    For security reasons, never share your username, password, social security number, account number or other private data online, unless you are certain who you are providing that information to, and only share information through a secure webpage or site.
+     
+    </td>
+            </tr>
+        </tbody></table>
+    </div></div><div class="b"><div></div></div></div>
+    </form>
+    
+  </div>
+
+
+</div>

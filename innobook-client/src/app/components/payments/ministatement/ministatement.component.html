@@ -1,0 +1,55 @@
+<div>
+  <div  class="col-sm-offset-1">
+  <label>
+    Last 8 transactions 
+    </label>
+  </div>
+  <div class="row" >
+    <div class="text-left col-sm-6">
+      Transactions List - {{name}} -{{accNo}}
+      </div>
+      <div  class="text-right col-sm-6">
+        Dispalying 1-8 of 8 results
+      </div>
+  </div>
+  <div class="tex-center">
+  <table class="table table-bordered table-responsive">
+    <tr>
+    <th>
+      S.NO
+      </th>
+      <th>
+         Transction Date
+      </th>
+      <th>
+        Cheque No
+      </th>
+      <th>
+       Transction Remarks
+      </th>
+      <th>
+       withdrawal Amount(INR)
+      </th>
+      <th>
+      Deposit Amount(INR)
+      </th><th>
+        Balance Amount
+      </th>
+      </tr>
+      
+      <tr *ngFor = "let obj of sampleObj;let i = index" [attr.data-index]="i">
+        
+        <td>{{i+1}}</td> 
+
+         <td>{{obj.Date}}</td> 
+          <td>{{obj.Chequeno}}</td>
+          <td>{{obj.}}</td>
+            <td>{{obj.withdrawalAmount}}</td> 
+             <td>{{obj.DepositAmount}}</td>
+               <td>{{obj.BalanceAmount}}</td> 
+               
+        </tr>
+        
+  </table>
+  </div>
+</div>

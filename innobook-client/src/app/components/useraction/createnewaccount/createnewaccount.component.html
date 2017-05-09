@@ -1,0 +1,172 @@
+<div class="container">
+    <div class="login-main col-md-8">
+        <form action="/User/AccessSignin/Start" id="AccessForm" method="post" class="ng-pristine ng-valid"><input name="FormInstanceToken" type="hidden" value="7D150975E3AF4C219DC8E335B0A4AC77" autocomplete="off">
+            <noscript>&lt;input name='NoJavascript' type='hidden' value='true' /&gt;</noscript>
+            <a id="inline" href="#idash" tabindex="-1"></a>
+
+            <div class="RoundBase RoundPad Corner RoundBaseDone">
+                <div class="RoundWrap content RoundWrapDone login-left-main">
+                    <div class="t"></div>
+                    <div class="Round RoundDone" style="background-color: transparent; padding: 0px; margin: 0px; border: 0px;">
+                        <table class="Edit" cellspacing="2px">
+                            <!-- ==================== Title -->
+                            <tbody>
+                                <tr class="Title">
+                                    <td colspan="2">
+                                        Register – Welcome to Innobank Online Banking
+                                    </td>
+                                </tr>
+                                <!-- ==================== Field -->
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        First Name :
+                                    </td>
+                                    <td class="Value">
+                                        <input autocomplete="off" required #fname="ngModel" [(ngModel)]="user.fname" name="fname" minlength="4" maxlength="15" pattern="^[a-zA-Z\s]+$">                                        &nbsp;&nbsp;
+                                        <span *ngIf="fname.errors && (fname.dirty || fname.touched)" class="error">
+                                            <span [hidden]="!fname.errors.required">Please Enter the Firstname </span>
+                                        <span [hidden]="!fname.errors.minlength">Please Enter atleast 4 Charcters</span>
+                                        <!--<span [hidden]="!lname.errors.maxlength">Lastname Should not exceeds 15 character</span>-->
+                                        <span [hidden]="!fname.errors.pattern">Firstname should be in Alphabets</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        Last Name :
+                                    </td>
+                                    <td class="Value">
+                                        <input autocomplete="off" required #lname="ngModel" [(ngModel)]="user.lname" name="lname" minlength="4" maxlength="15" pattern="^[a-zA-Z\s]+$">                                        &nbsp;&nbsp;
+                                        <span *ngIf="lname.errors && (lname.dirty || lname.touched)" class="error">
+                                            <span [hidden]="!lname.errors.required">Please Enter the Lastname </span>
+                                        <span [hidden]="!lname.errors.minlength">Please Enter atleast 4 Charcters</span>
+                                        <!--<span [hidden]="!lname.errors.maxlength">Lastname Should not exceeds 15 character</span>-->
+                                        <span [hidden]="!lname.errors.pattern">Lastname should be in Alphabets</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        Email ID :
+                                    </td>
+                                    <td class="Value">
+                                        <input autocomplete="off" name="email" required #email="ngModel" [(ngModel)]="user.email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">                                        &nbsp;&nbsp;
+                                        <span *ngIf="email.errors && (email.dirty || email.touched)" class="error">
+                                            <span [hidden]="!email.errors.required">Please Enter the Email-Id </span>
+                                        <span [hidden]="!email.errors.pattern">Please enter valid Email-Id pattern</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        Aadhaar Card Number :
+                                    </td>
+                                    <td class="Value">
+                                        <input autocomplete="off" name="aadhar" required #aadhar="ngModel" [(ngModel)]="user.aadhar" pattern="^[1-9][0-9]{11}">                                        &nbsp;&nbsp;
+                                        <span *ngIf="aadhar.errors && (aadhar.dirty || aadhar.touched)" class="error">
+                                            <span [hidden]="!aadhar.errors.required">Please Enter the Your Aadhar Number</span>
+                                        <span [hidden]="!aadhar.errors.pattern">Please enter valid Aadhar Number</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        PAN Card Number :
+                                    </td>
+                                    <td class="Value">
+                                        <input autocomplete="off" name="pan" required #pan="ngModel" [(ngModel)]="user.pan" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">                                        &nbsp;&nbsp;
+                                        <span *ngIf="pan.errors && (pan.dirty || pan.touched)" class="error">
+                                            <span [hidden]="!pan.errors.required">Please Enter the Your Pan Number</span>
+                                        <span [hidden]="!pan.errors.pattern">Please enter valid Pan Number</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        Mobile Number :
+                                    </td>
+                                    <td class="Value">
+                                        <input autocomplete="off" name="mobile" required #mobile="ngModel" [(ngModel)]="user.mobile" pattern="^[7-9][0-9]{9}">                                        &nbsp;&nbsp;
+                                        <span *ngIf="mobile.errors && (mobile.dirty || mobile.touched)" class="error">
+                                            <span [hidden]="!mobile.errors.required">Please Enter the Your Mobile Number</span>
+                                        <span [hidden]="!mobile.errors.pattern">Please enter valid mobile Number</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        Date of Birth :
+                                    </td>
+                                    <td class="Value">
+                                        <input autocomplete="off" type="date" name="dob" required #dob="ngModel" [(ngModel)]="user.dob" placeholder="mm/dd/yyyy">                                        &nbsp;&nbsp;
+                                        <span *ngIf="dob.errors && (dob.dirty || dob.touched)" class="error">
+                                            <span [hidden]="!dob.errors.required">Please Enter the Your Date Of Birth</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        Gender :
+                                    </td>
+                                    <td class="Value">
+                                        <input type="radio" value="male" name="gender" [(ngModel)]="user.gender" required #gender="ngModel">                                        Male
+                                        <input type="radio" value="female" name="gender" [(ngModel)]="user.gender" required #gender="ngModel">                                        Female
+                                        <span *ngIf="gender.errors && (gender.dirty || gender.touched)" class="error">
+                                            <span [hidden]="!gender.errors.required">Please Enter the Your Mobile Number</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        Address :
+                                    </td>
+                                    <td class="Value">
+                                        <textarea class="form-control" name="address" required #address="ngModel" [(ngModel)]="user.address"></textarea>
+                                        <span *ngIf="address.errors && (address.dirty || address.touched)" class="error">
+                                            <span [hidden]="!address.errors.required">Please Enter the Your Address</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="Field">
+                                    <td class="LabelForm">
+                                        Deposit Money :
+                                    </td>
+                                    <td class="Value">
+                                        <input autocomplete="off" name="deposit" required #deposit="ngModel" [(ngModel)]="user.deposit">                                        &nbsp;&nbsp;
+                                        <span *ngIf="mobile.errors && (mobile.dirty || mobile.touched)" class="error">
+                                            <span [hidden]="!deposit.errors.required">Please Enter the money</span>
+                                        <!--<span [hidden]="!deposit.errors.pattern">Please enter valid mobile Number</span>-->
+                                        </span>
+                                    </td>
+                                </tr>
+                                <!-- ==================== Action -->
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <button type="submit" class="btn btn-primary " [disabled]="user.invalid" (click)="CreateUser(user)">Create Account</button>
+                                    </td>
+
+                                    <tr class="Field">
+                                        <td class="LabelForm">
+                                        </td>
+                                        <td class="Value">
+                                            For security reasons, never share your username, password, social security number, account number or other private data online,
+                                            unless you are certain who you are providing that information to, and only share
+                                            information through a secure webpage or site.
+
+                                        </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="b">
+                    <div></div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,40 @@
+
+<app-headerlogin></app-headerlogin>
+<app-navmenu></app-navmenu>
+<div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="container" style="margin-left:-176px;">
+<table class="table table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Gender</th>
+        <th>Date of Birth</th>
+        <th>PAN No</th>
+        <th>Aadhar No</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let value of data">
+        <td>{{value.firstName + value.lastName}}</td>
+        <td>{{ value.email }}</td>
+        <td>{{ value.mobileNumber }}</td>
+        <td>{{ value.gender }}</td>
+        <td>{{ value.dob | date:'dd/MM/yyyy' }}</td>
+        <td>{{ value.pancardNumber }}</td>
+        <td>{{ value.aadharcardNumber }}</td>
+        <td> {{ value.address }} </td>
+        <td> <button type = "button" (click)="AcceptPerson(value)" class = "btn btn-success">Accept</button><button type = "button" (click)="declinePerson(value)" class = "btn btn-danger">Decline</button> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<app-footer></app-footer>
